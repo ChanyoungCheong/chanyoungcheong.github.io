@@ -1,0 +1,846 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   GLOBAL VARIABLES
+========================= */
+
+:root {
+    --page-width: 800px;
+    --layout-width: 1000px;
+
+    --desktop-side-gap: 40px;
+    --tablet-side-gap: 25px;
+    --mobile-side-gap: 20px;
+
+    --divider: #d0d0d0;
+    --text-gray: #555;
+    --muted-gray: #999;
+}
+
+
+/* =========================
+   SHARED PAGE ALIGNMENT
+
+   Home / Research / Publications
+   all use exactly the same
+   left and right boundaries.
+========================= */
+
+.navbar,
+.hero,
+.content-section,
+.research-section,
+.research-category,
+.publication-category,
+.publication-year-section,
+.manuscript-section {
+    width: min(
+        var(--page-width),
+        calc(100% - 80px)
+    );
+
+    margin-left: max(
+        var(--desktop-side-gap),
+        calc((100% - var(--layout-width)) / 2)
+    );
+
+    margin-right: 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    width: 100%;
+}
+
+.navbar {
+    padding: 45px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 22px;
+}
+
+.site-name {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+    align-self: flex-start;
+}
+
+.nav-links {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+}
+
+.nav-links a {
+    font-size: 17px;
+    color: var(--muted-gray);
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #111;
+}
+
+
+/* =========================
+   HOME HERO
+========================= */
+
+.hero {
+    margin-top: 50px;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+.hero + .content-section {
+    padding-top: 50px;
+}
+
+
+/* =========================
+   HOME CONTENT
+========================= */
+
+.content-section {
+    padding: 70px 0;
+
+    border-bottom: 1px solid var(--divider);
+}
+
+.section-grid {
+    display: grid;
+
+    /*
+       150px title
+       40px gap
+       remaining width = content
+    */
+    grid-template-columns: 150px minmax(0, 1fr);
+
+    gap: 40px;
+}
+
+.section-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.section-content {
+    width: 100%;
+    min-width: 0;
+}
+
+.section-content p {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: var(--text-gray);
+}
+
+.section-content .lead {
+    font-size: 19px;
+    line-height: 1.5;
+
+    color: #111;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section .section-content p,
+.about-section .section-content .lead {
+    text-align: justify;
+}
+
+
+/* =========================
+   TIMELINE
+   Affiliations / Education /
+   Research Experience
+========================= */
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 125px minmax(0, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-year {
+    font-size: 14px;
+    line-height: 1.35;
+
+    color: var(--muted-gray);
+
+    white-space: nowrap;
+}
+
+.timeline-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+.timeline-item p {
+    margin: 0;
+}
+
+.education-detail {
+    margin-top: 8px !important;
+
+    color: #777 !important;
+}
+
+
+/* =========================
+   PROFESSIONAL MEMBERSHIPS
+========================= */
+
+.membership-list {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.membership-list li {
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #111;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    border-bottom: none;
+
+    padding-bottom: 120px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.contact-item {
+    display: grid;
+
+    grid-template-columns: 120px minmax(0, 1fr);
+
+    gap: 25px;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact-label {
+    color: #111;
+    font-weight: 600;
+}
+
+.contact-item a {
+    color: var(--text-gray);
+}
+
+.contact-item a:hover {
+    color: #111;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESEARCH PAGE
+========================= */
+
+.research-page {
+    padding-bottom: 120px;
+}
+
+.research-section {
+    padding: 70px 0;
+
+    border-bottom: 1px solid var(--divider);
+}
+
+.research-text {
+    display: grid;
+
+    /*
+       150px title
+       55px gap
+       remaining width = body
+
+       This keeps the right boundary
+       fixed at exactly 800px.
+    */
+    grid-template-columns: 150px minmax(0, 1fr);
+
+    gap: 55px;
+
+    margin-bottom: 40px;
+}
+
+.research-description {
+    width: 100%;
+    min-width: 0;
+}
+
+.research-description p {
+    margin-bottom: 14px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: var(--text-gray);
+
+    text-align: justify;
+}
+
+.research-description p:last-child {
+    margin-bottom: 0;
+}
+
+.research-image {
+    width: 100%;
+}
+
+.research-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* Optional placeholder
+   for unfinished research figures
+*/
+
+.research-image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+
+    background: #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    color: var(--muted-gray);
+}
+
+
+/* =========================
+   RESEARCH CATEGORY HEADINGS
+========================= */
+
+.research-category {
+    padding-top: 55px;
+    padding-bottom: 10px;
+}
+
+.research-category h1 {
+    font-size: 22px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.2px;
+}
+
+.previous-research-category {
+    margin-top: 30px;
+
+    padding-top: 55px;
+}
+
+
+/* =========================
+   PUBLICATIONS PAGE
+========================= */
+
+.publications-page {
+    padding-bottom: 120px;
+}
+
+
+/* =========================
+   PUBLICATION CATEGORY
+   Peer-Reviewed Articles /
+   Conference Abstracts
+========================= */
+
+.publication-category {
+    padding-top: 55px;
+    padding-bottom: 20px;
+}
+
+.publication-category h1 {
+    font-size: 22px;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   PUBLICATION YEAR
+========================= */
+
+.publication-year-section {
+    display: grid;
+
+    /*
+       Same geometry as Research:
+
+       150px year
+       55px gap
+       remaining width = citations
+    */
+    grid-template-columns: 150px minmax(0, 1fr);
+
+    gap: 55px;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--divider);
+}
+
+.publication-year h2 {
+    font-size: 18px;
+    font-weight: 600;
+
+    line-height: 1.15;
+}
+
+
+/* =========================
+   PUBLICATION ENTRIES
+========================= */
+
+.publication-list {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.publication-item {
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: var(--text-gray);
+}
+
+.publication-item strong {
+    font-weight: 700;
+}
+
+.publication-item em {
+    color: #111;
+}
+
+
+/* DOI / external links */
+
+.publication-item a {
+    color: inherit;
+}
+
+.publication-item a:hover {
+    color: #111;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MANUSCRIPT SECTION
+   Currently unused,
+   but retained for future use
+========================= */
+
+.manuscript-section {
+    padding: 35px 0 70px;
+
+    border-bottom: 1px solid var(--divider);
+}
+
+.restricted-access-link {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-bottom: 1px solid #111;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    /*
+       All major page elements
+       remain perfectly aligned.
+    */
+
+    .navbar,
+    .hero,
+    .content-section,
+    .research-section,
+    .research-category,
+    .publication-category,
+    .publication-year-section,
+    .manuscript-section {
+        width: calc(100% - 50px);
+
+        margin-left: var(--tablet-side-gap);
+        margin-right: 0;
+    }
+
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: flex-start;
+
+        gap: 15px 22px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    /*
+       Shared mobile alignment
+    */
+
+    .navbar,
+    .hero,
+    .content-section,
+    .research-section,
+    .research-category,
+    .publication-category,
+    .publication-year-section,
+    .manuscript-section {
+        width: calc(100% - 40px);
+
+        margin-left: var(--mobile-side-gap);
+        margin-right: 0;
+    }
+
+
+    /* Header */
+
+    .navbar {
+        padding: 30px 0;
+
+        gap: 18px;
+    }
+
+    .site-name {
+        font-size: 24px;
+
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        margin-top: 30px;
+    }
+
+
+    /* Content */
+
+    .content-section,
+    .research-section {
+        padding: 55px 0;
+    }
+
+
+    /* Home / Research grids */
+
+    .section-grid,
+    .research-text {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .research-text {
+        margin-bottom: 30px;
+    }
+
+
+    /* Timeline */
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .timeline-year {
+        white-space: normal;
+    }
+
+
+    /* Text alignment */
+
+    .about-section .section-content p,
+    .about-section .section-content .lead,
+    .research-description p {
+        text-align: left;
+    }
+
+
+    /* Contact */
+
+    .contact-item {
+        grid-template-columns: 1fr;
+
+        gap: 2px;
+    }
+
+
+    /* Research */
+
+    .research-category h1 {
+        font-size: 20px;
+    }
+
+    .research-image-placeholder {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    /* Publications */
+
+    .publication-category h1 {
+        font-size: 20px;
+    }
+
+    .publication-year-section {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 30px 0;
+    }
+
+}
+
+/* =========================
+   AWARDS
+========================= */
+
+.award-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.award-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    margin-bottom: 4px;
+}
+
+.award-item p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: var(--text-gray);
+}
+
+.award-date {
+    margin-top: 5px !important;
+
+    color: var(--muted-gray) !important;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-page .section-grid {
+    grid-template-columns: 150px minmax(0, 580px);
+    gap: 70px;
+}
+
+.skills-list li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #111;
+}
+
+.skills-list strong {
+    font-weight: 600;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 25px;
+}
+
+.experience-date {
+    font-size: 14px;
+    line-height: 1.35;
+    color: var(--muted-gray);
+    white-space: nowrap;
+}
+
+.experience-details {
+    min-width: 0;
+}
+
+.experience-details h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    margin-bottom: 4px;
+}
+
+.experience-details p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: var(--text-gray);
+}
+
+
+/* =========================
+   EXPERIENCE MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+
+}
