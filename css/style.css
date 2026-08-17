@@ -281,7 +281,7 @@ a {
 ========================= */
 
 .contact-section {
-    border-bottom: 1px solid var(--divider);
+    border-bottom: none;
     padding-bottom: 60px;
 }
 
@@ -331,6 +331,10 @@ a {
     padding: 70px 0;
 
     border-bottom: 1px solid var(--divider);
+}
+
+.research-section:last-child {
+    border-bottom: none;
 }
 
 .research-text {
@@ -478,6 +482,10 @@ a {
     border-bottom: 1px solid var(--divider);
 }
 
+.publication-year-section:last-child {
+    border-bottom: none;
+}
+
 .publication-year h2 {
     font-size: 18px;
     font-weight: 600;
@@ -584,11 +592,6 @@ a {
         justify-content: flex-start;
 
         gap: 15px 22px;
-    }
-
-    .page-bottom-divider {
-        width: calc(100% - 50px);
-        margin-left: var(--tablet-side-gap);
     }
 
 }
@@ -741,6 +744,10 @@ a {
     gap: 30px;
 }
 
+.awards-page .content-section:last-child {
+    border-bottom: none;
+}
+
 .award-item h3 {
     font-size: 15px;
     font-weight: 600;
@@ -802,6 +809,10 @@ a {
     gap: 35px;
 }
 
+.experience-page .content-section:last-child {
+    border-bottom: none;
+}
+
 .experience-item {
     display: grid;
     grid-template-columns: 125px minmax(0, 1fr);
@@ -851,30 +862,4 @@ a {
     .experience-date {
         white-space: normal;
     }
-
-    .page-bottom-divider {
-        width: calc(100% - 40px);
-        margin-left: var(--mobile-side-gap);
-    }
-
-}
-
-/* =========================
-   Page bottom divider
-========================= */
-
-.page-bottom-divider {
-    width: min(
-        var(--page-width),
-        calc(100% - 80px)
-    );
-
-    margin-left: max(
-        var(--desktop-side-gap),
-        calc((100% - var(--layout-width)) / 2)
-    );
-
-    margin-top: 40px;
-
-    border-top: 1px solid var(--divider);
 }
