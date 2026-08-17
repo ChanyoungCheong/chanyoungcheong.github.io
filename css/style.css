@@ -256,6 +256,11 @@ a {
     color: #777 !important;
 }
 
+.education-honor {
+    font-style: italic;
+    font-weight: 500;
+    color: #9a6f3a;
+}
 
 /* =========================
    PROFESSIONAL MEMBERSHIPS
