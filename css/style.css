@@ -199,6 +199,14 @@ a {
     color: #111;
 }
 
+.plain-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.plain-link:hover {
+    text-decoration: underline;
+}
 
 /* =========================
    ABOUT
