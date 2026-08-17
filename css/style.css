@@ -764,31 +764,28 @@ a {
    SKILLS
 ========================= */
 
-.skills-list {
-    list-style: disc;
-    padding-left: 18px;
-    margin: 0;
-}
-
-.skills-list li {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #111;
-    padding-left: 2px;
-}
-
-.skills-page .section-grid {
-    grid-template-columns: 150px minmax(0, 580px);
-    gap: 70px;
-}
-
-.skills-list strong {
-    font-weight: 600;
-}
-
-.language-list {
+.skills-presentation-list {
     list-style: none;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: var(--text-gray);
+}
+
+.skills-presentation-list li {
+    margin-bottom: 18px;
+}
+
+.skills-presentation-list li:last-child {
+    margin-bottom: 0;
+}
+
+.skills-presentation-list strong {
+    font-weight: 600;
+    color: #111;
 }
 
 /* =========================
