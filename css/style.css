@@ -281,9 +281,8 @@ a {
 ========================= */
 
 .contact-section {
-    border-bottom: none;
-
-    padding-bottom: 120px;
+    border-bottom: 1px solid var(--divider);
+    padding-bottom: 60px;
 }
 
 .contact-list {
@@ -587,6 +586,11 @@ a {
         gap: 15px 22px;
     }
 
+    .page-bottom-divider {
+        width: calc(100% - 50px);
+        margin-left: var(--tablet-side-gap);
+    }
+
 }
 
 
@@ -848,5 +852,29 @@ a {
         white-space: normal;
     }
 
+    .page-bottom-divider {
+        width: calc(100% - 40px);
+        margin-left: var(--mobile-side-gap);
+    }
+
 }
 
+/* =========================
+   Page bottom divider
+========================= */
+
+.page-bottom-divider {
+    width: min(
+        var(--page-width),
+        calc(100% - 80px)
+    );
+
+    margin-left: max(
+        var(--desktop-side-gap),
+        calc((100% - var(--layout-width)) / 2)
+    );
+
+    margin-top: 40px;
+
+    border-top: 1px solid var(--divider);
+}
