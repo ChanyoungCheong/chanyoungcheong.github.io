@@ -519,6 +519,10 @@ a {
     gap: 18px;
 }
 
+.publications-content .publication-list {
+    gap: 24px;
+}
+
 .publication-item {
     font-size: 14px;
     line-height: 1.7;
