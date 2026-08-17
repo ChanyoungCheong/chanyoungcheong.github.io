@@ -804,3 +804,24 @@ a {
     color: #111;
 }
 
+/* =========================
+   PRESENTATIONS
+========================= */
+
+.presentation-date {
+    margin-top: 4px;
+    color: var(--muted-gray);
+}
+
+.presentation-item .publication-item {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.presentation-date {
+    margin: 4px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted-gray);
+}
