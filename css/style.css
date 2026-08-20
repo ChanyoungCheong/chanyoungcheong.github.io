@@ -478,6 +478,12 @@ a {
     line-height: 1.2;
 }
 
+.publication-note {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: var(--muted-gray);
+}
 
 /* =========================
    PUBLICATION YEAR
