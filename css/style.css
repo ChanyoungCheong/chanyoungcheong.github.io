@@ -210,12 +210,12 @@ a {
 
 /* =========================
    ABOUT
-========================= */
+========================= 
 
 .about-section .section-content p,
 .about-section .section-content .lead {
     text-align: justify;
-}
+} */
 
 
 /* =========================
@@ -388,7 +388,7 @@ a {
 
     color: var(--text-gray);
 
-    text-align: justify;
+/*    text-align: justify; */
 }
 
 .research-description p:last-child {
