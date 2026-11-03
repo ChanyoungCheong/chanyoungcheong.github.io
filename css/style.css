@@ -850,3 +850,18 @@ a {
     line-height: 1.5;
     color: var(--muted-gray);
 }
+
+
+/* =========================
+   Link style
+========================= */
+main a[href] {
+    color: #2b5797;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+main a[href]:hover {
+    color: #1a3a6b;
+}
